@@ -1,0 +1,6 @@
+{
+    "name":"Expense App - Production",
+    "database":{
+        "host":"production-db"
+    }
+}

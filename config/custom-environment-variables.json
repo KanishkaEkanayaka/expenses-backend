@@ -1,0 +1,8 @@
+{
+    "database":{
+        "location":"expenses_database_location"
+    },
+    "jwt":{
+        "privateKey":"expenses_jwt_private_key"
+    }
+}

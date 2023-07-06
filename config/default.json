@@ -1,0 +1,6 @@
+{
+    "name":"Expense App",
+    "jwt":{
+        "privateKey":""
+    }
+}
