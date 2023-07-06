@@ -1,3 +1,4 @@
+var cors = require('cors');
 require('express-async-errors');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -41,6 +42,13 @@ if(!config.get('database.location')){
 mongoose.connect(config.get('database.location'))
     .then(debug('Database Connected'))
     .catch((err)=>(debug('Database connection failed..')));
+
+    var corsOptions = {
+        origin: ["http://localhost:3000"],
+        optionsSuccessStatus: 200 // For legacy browser support
+        }
+        
+        app.use(cors(corsOptions));
 
 app.use('/api/users',users);
 app.use('/api/auth',auth);
